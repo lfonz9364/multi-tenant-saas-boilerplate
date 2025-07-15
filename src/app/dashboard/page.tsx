@@ -34,7 +34,7 @@ export default function DashboardPage() {
   }, [isLoaded, router, user]);
 
   return (
-    <div className="p-8 w-full max-w-2xl mx-auto fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center">
+    <div className="w-full flex items-center justify-center">
       <p>Redirecting to your dashboard...</p>
     </div>
   );
