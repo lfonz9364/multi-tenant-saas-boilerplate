@@ -1,4 +1,5 @@
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
+import DashboardPage from "./dashboard/page";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
         <UserButton />
         <p>Welcome to the SaaS starter ✨</p>
       </SignedIn>
+      <DashboardPage />
     </main>
   );
 }
