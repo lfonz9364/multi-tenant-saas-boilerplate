@@ -4,7 +4,7 @@ import { prisma } from "../../../lib/db";
 export default async function TenantDashboard({
   params,
 }: {
-  params: Promise<{ tenantSlug: string }>;
+  params: Promise<{ tenantSlug: string }> | { tenantSlug: string };
 }) {
   const { userId, redirectToSignIn } = await auth();
   const { tenantSlug } = await params;

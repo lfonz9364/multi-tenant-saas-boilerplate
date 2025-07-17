@@ -32,7 +32,6 @@ const MainDashboard = () => {
             body: JSON.stringify({
               clerkUserId: user.id,
               email: user.primaryEmailAddress?.emailAddress,
-              name: user.fullName,
             }),
           });
           const data: { tenantSlug: string } = await res.json();
@@ -58,9 +57,9 @@ const MainDashboard = () => {
         <span className="mb-8 flex flex-col items-center justify-between">
           <UserButton appearance={userButtonAppearance} />
           <p className="mt-4">Welcome to the SaaS starter ✨</p>
+          <p>Redirecting to your dashboard...</p>
         </span>
       </SignedIn>
-      <p>Redirecting to your dashboard...</p>
     </div>
   );
 };
