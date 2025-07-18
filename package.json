@@ -9,10 +9,10 @@
     "lint": "next lint"
   },
   "prisma": {
-    "schema": "src/prisma/schema.prisma"
+    "schema": "./prisma/schema.prisma"
   },
   "dependencies": {
-    "@clerk/nextjs": "^6.24.0",
+    "@clerk/nextjs": "^6.25.0",
     "@prisma/client": "^6.11.1",
     "next": "15.3.5",
     "prisma": "^6.11.1",
