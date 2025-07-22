@@ -12,6 +12,7 @@ This is a boilerplate for those who wanted to create a SaaS app.
 - Ngrok 3.23.3
 - Node 22.13.1
 - Supabase (PostgreSQL 17.4)
+- Axios 1.10.0
 
 ## Run app
 
