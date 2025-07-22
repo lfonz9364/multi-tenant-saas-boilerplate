@@ -1,8 +1,6 @@
+import { prisma } from "@/lib/db";
 import { verifyWebhook } from "@clerk/nextjs/webhooks";
-import { PrismaClient } from "@prisma/client";
 import { NextRequest, NextResponse } from "next/server";
-
-const prisma = new PrismaClient();
 
 type Email = {
   created_at: number;
