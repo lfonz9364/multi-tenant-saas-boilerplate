@@ -41,6 +41,16 @@ model Membership {
   @@unique([userId,tenantId])
 }
 
+model AuditLog {
+  id        String   @id @default(cuid())
+  action    String
+  entity    String
+  entityId  String
+  userId    String?   // Optional: who did it
+  metadata  Json?
+  createdAt DateTime @default(now())
+}
+
 enum Role {
   OWNER
   ADMIN

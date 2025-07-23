@@ -1,8 +1,6 @@
+import { prisma } from "@/lib/db";
 import { verifyWebhook } from "@clerk/nextjs/webhooks";
-import { PrismaClient } from "@prisma/client";
 import { NextRequest, NextResponse } from "next/server";
-
-const prisma = new PrismaClient();
 
 type Email = {
   created_at: number;
@@ -36,7 +34,7 @@ export async function POST(req: NextRequest) {
   const authReq = await verifyWebhook(req);
 
   if (!authReq) {
-    return new Response("Unauthorized", { status: 401 });
+    return new Response("Unauthorised", { status: 401 });
   }
 
   if (
