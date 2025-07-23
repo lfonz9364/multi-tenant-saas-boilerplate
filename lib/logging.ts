@@ -11,7 +11,7 @@ export const logAudit = async ({
   entity: string;
   entityId: string;
   userId?: string;
-  metadata?: Record<string, never>;
+  metadata?: Record<string, unknown | never>;
 }) => {
   await prisma.auditLog.create({
     data: {
@@ -19,7 +19,8 @@ export const logAudit = async ({
       entity,
       entityId,
       userId,
-      metadata,
+      // Resolved prisma issue: https://github.com/prisma/prisma/issues/12131
+      metadata: JSON.stringify(metadata),
     },
   });
 };
