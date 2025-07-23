@@ -17,7 +17,7 @@ export async function createSupabaseClient() {
               cookieStore.set(name, value, options)
             );
           } catch (err) {
-            throw Error(err as string);
+            console.error("DB client not created:", err);
           }
         },
       },
