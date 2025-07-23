@@ -34,7 +34,7 @@ export async function POST(req: NextRequest) {
   const authReq = await verifyWebhook(req);
 
   if (!authReq) {
-    return new Response("Unauthorized", { status: 401 });
+    return new Response("Unauthorised", { status: 401 });
   }
 
   if (

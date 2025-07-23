@@ -23,7 +23,7 @@ export default async function TenantDashboard({
   if (!tenant || tenant.memberships.length === 0) {
     return (
       <div className="p-10 text-red-500">
-        Unauthorized or not a member of this tenant
+        Unauthorised or not a member of this tenant
       </div>
     );
   }
